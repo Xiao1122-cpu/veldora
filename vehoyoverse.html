@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .nav-link {
+            text-decoration: none;
+            padding: 8px 12px;
+            color: black;
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid dodgerblue;
+            color: dodgerblue;
+        }
+
+        header {
+            position: fixed;
+            z-index: 1000;
+            opacity: 0.8;
+            width: 100%;
+        }
+
+        .parallax2 {
+            /* The image used */
+            background-image: url("image/star.jpg");
+
+            /* Set a specific height */
+            min-height: 300px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .main-item{
+            display: flex;
+        }
+
+        .main-item .item{
+            margin: 0px 4.5%;
+            text-align: center;
+        }
+
+        .main-item .item>img{
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            margin: 20px 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <picture>
+                        <source srcset="" type="image/svg+xml">
+                        <img src="image/logo.png" class="img-fluid " alt="" width="200px" height="100px">
+                    </picture>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fs-4 flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="index.html">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="tintuc.html">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="vehoyoverse.html">Về HoYoverse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="trungtamnap.html">Trung Tâm Nạp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="parallax2 d-flex align-items-center justify-content-center">
+        <h1 class="text-white fw-bold mt-5" style="font-size: 400%;">Về HoYoverse</h1>
+    </div>
+    <div class="container mt-5 w-75">
+        <h1 class="fw-bold">Về HoYoverse</h1>
+        <div class="text mt-5 fs-5">
+            <p>HoYoverse cam kết cung cấp trải nghiệm thế giới ảo sống động cho người chơi trên toàn thế giới. Chúng tôi
+                đã mang đến cho người hâm mộ những game được yêu thích bao gồm Genshin Impact, Honkai: Star Rail, Honkai
+                Impact 3, Tears of Themis và Zenless Zone Zero, cùng nhiều nội dung giải trí đa dạng.</p>
+            <p>Cộng đồng là cốt lõi của mọi việc mà chúng tôi thực hiện. Chúng tôi nỗ lực thu hút người hâm mộ cũng như
+                xây dựng một cộng đồng toàn cầu nhiệt tình và hòa nhập, mang đến khả năng tiếp cận và khuyến khích mọi
+                người chia sẻ niềm đam mê với ACG (Hoạt hình, truyện tranh và game) thông qua khả năng sáng tạo và kỹ
+                năng của họ.</p>
+            <p>Phá vỡ giới hạn của trí tưởng tượng, chúng tôi liên tục khám phá các công nghệ phát triển game tiên tiến
+                và đã tích lũy năng lực kỹ thuật hàng đầu trong lĩnh vực cel shading, cloud gaming và các lĩnh vực khác.
+            </p>
+            <p>Trong tương lai, chúng tôi sẽ tiếp tục mở rộng nhiệm vụ sáng tạo nội dung, nghiên cứu công nghệ và phát
+                hành thông qua hoạt động ở các văn phòng tại Singapore, Montreal, Los Angeles, Tokyo, Seoul và các khu
+                vực khác.</p>
+        </div>
+        <div class="main-item">
+            <div class="item">
+                <img src="image/logoHK.jpeg" alt="">
+                <p>Hokai Impact 3</p>
+            </div>
+            <div class="item">
+                <img src="image/logoGl.jpeg" alt="">
+                <p>Genshin Impact</p>
+            </div>
+            <div class="item">
+                <img src="image/logoKB.jpg" alt="">
+                <p>Tears of Themis</p>
+            </div>
+            <div class="item">
+                <img src="image/logoHR.png" alt="">
+                <p>Honkai: Star Rail</p>
+            </div>
+            <div class="item">
+                <img src="image/logoZZZ.png" alt="">
+                <p>Zenless Zone Zero</p>
+            </div>
+        </div>
+        <div class="main-item">
+            <div class="items">
+                <img src="image/logoHoyo.jpeg" alt="" style="border-radius: 20px; width: 10%; height: auto;">
+                <p>HoYoLAB</p>
+            </div>
+            <div class="itemx">
+                <img src="image/logoHYM.jpg" alt="" width="100%">
+                <p>HOYO-MiX</p>
+            </div>
+        </div>
+    </div>
+    <footer class="fw-bold text-light text-center p-3 bg-dark">
+        <p>PC10136-Săn-Quỷ</p>
+        <img src="image/logo.png" alt="" width="300px">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
