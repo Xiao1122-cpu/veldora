@@ -59,6 +59,12 @@
             text-align: center;
             border: 1px solid rgba(0, 0, 0, 0.5);
         }
+
+        .actives{
+            background-color: rgb(0, 149, 255);
+            border: none;
+            
+        }
     </style>
 </head>
 
@@ -102,12 +108,12 @@
         <div class="container mt-3" style="background-color: white; border-radius: 20px;">
             <div class="slier justify-content-center p-3 pt-5">
                 <div class="item" id="item1">
-                    <p class="page">1</p>
+                    <p class="page actives">1</p>
                     <p class="name">Đăng Nhập Tài Khoản</p>
                 </div>
                 <p>_______________________________________________</p>
                 <div class="item" id="item2">
-                    <p class="page">2</p>
+                    <p class="page ">2</p>
                     <p class="name">Chọn Phương Thức Nạp</p>
                 </div>
                 <p>_______________________________________________</p>
@@ -139,7 +145,7 @@
                                     <img src="image/logo2-removebg-preview.png" alt="" class="w-50">
                                     <h4 class="modal-title">Đăng Nhập Tài Khoản</h4>
                                 </div>
-                                <form class="text-center mt-5">
+                                <form class="text-center mt-4">
                                     <div class="mb-3">
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp" placeholder="Tên Người Dùng/Email"
@@ -149,8 +155,8 @@
                                         <input type="password" class="form-control" id="exampleInputPassword1"
                                             placeholder="Mật Khẩu" style="border-radius: 10px;">
                                     </div>
-                                    <button type="submit" class="btn btn-primary px-5 w-100 mt-4"
-                                        style="border-radius: 10px;">Đăng Nhập</button>
+                                    <a class="btn btn-primary px-5 w-100 mt-4" style="border-radius: 10px;" href="trungtamnap1.html" role="button">
+                                        Đăng Nhập</a>
                                 </form>
                                 <div class="text-end p-3" data-bs-toggle="modal" data-bs-target="#myModals">
                                     <a href="#" data-bs-dismiss="modal">Đăng Ký Ngay</a>
@@ -169,9 +175,9 @@
                             <div class="modal-body mx-4">
                                 <div class="text-center">
                                     <img src="image/logo2-removebg-preview.png" alt="" class="w-50">
-                                    <h4 class="modal-title">Đăng Ký`</h4>
+                                    <h4 class="modal-title">Đăng Ký</h4>
                                 </div>
-                                <form class="text-center mt-5">
+                                <form class="text-center mt-4">
                                     <div class="mb-3">
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp" placeholder="Email"
@@ -184,17 +190,33 @@
                                     </div>
                                     <div class="mb-3">
                                         <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="Vui lòng nhập mật khẩu"style="border-radius: 10px;">
+                                            placeholder="Vui lòng nhập mật khẩu" style="border-radius: 10px;">
                                     </div>
                                     <div class="mb-3">
                                         <input type="password" class="form-control" id="exampleInputPassword1"
                                             placeholder="Vui lòng nhập lại mật khẩu" style="border-radius: 10px;">
                                     </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked" style="font-size: 11px;">
+                                            <p>Tôi đã đọc và đồng ý <span class="text-primary">Điều Khoản Dịch Vụ</span>
+                                                & <span class="text-primary">Chính Sách Về Quyền Riêng Tư</span></p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
+                                        <label class="form-check-label" for="flexCheckChecked" style="font-size: 14px;">
+                                            <p>Đồng ý đăng ký nhận email thông tin khuyến mãi(Bạn có thể hủy đăng ký bất
+                                                cứ lúc nào) (Không bắt buộc)</p>
+                                        </label>
+                                    </div>
                                     <button type="submit" class="btn btn-primary px-5 w-100 mt-4"
                                         style="border-radius: 10px;">Đăng Ký</button>
                                 </form>
                                 <div class="text-center p-3" data-bs-toggle="modal" data-bs-target="#myModal">
-                                    <p>Đã có tài khoản?<a href="#" class="text-primary" data-bs-dismiss="modal">Đăng Nhập</a></p>
+                                    <p>Đã có tài khoản?<a href="#" class="text-primary" data-bs-dismiss="modal">Đăng
+                                            Nhập</a></p>
                                 </div>
 
                             </div>

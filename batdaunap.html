@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .nav-link {
+            text-decoration: none;
+            padding: 8px 12px;
+            color: black;
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid dodgerblue;
+            color: dodgerblue;
+        }
+
+        header {
+            position: fixed;
+            z-index: 1000;
+            opacity: 0.8;
+            width: 100%;
+        }
+
+        .parallax2 {
+            /* The image used */
+            background-image: url("image/star.jpg");
+
+            /* Set a specific height */
+            min-height: 300px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .slier {
+            display: flex;
+        }
+
+        .slier .item {
+            justify-items: center;
+            align-content: center;
+            width: 180px;
+        }
+
+        .slier .item .page {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            color: rgba(0, 0, 0, 0.503);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <picture>
+                        <source srcset="" type="image/svg+xml">
+                        <img src="image/logo.png" class="img-fluid " alt="" width="200px" height="100px">
+                    </picture>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fs-4 flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="index.html">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="tintuc.html">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="vehoyoverse.html">Về HoYoverse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="trungtamnap.html">Trung Tâm Nạp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="parallax2 d-flex align-items-center justify-content-center">
+        <h1 class="text-white fw-bold mt-5" style="font-size: 400%;">Trung Tâm Nạp</h1>
+    </div>
+    <div class="containers bg-light p-3">
+        <div class="container mt-3" style="background-color: white; border-radius: 20px;">
+            <div class="account p-3">
+                <h4 class="fw-bold">Tài khoản nạp</h4>
+                <div class="profile mx-auto bg-light p-3 mt-4" style="border-radius: 15px;">
+                    <form>
+                        <div class="row">
+                            <div class="col d-flex">
+                                <label for="" class="col-sm-2 col-form-label">Máy Chủ:</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Asia</option>
+                                    <option value="1">EU</option>
+                                    <option value="2">NA</option>
+                                </select>
+                            </div>
+                            <div class="col d-flex">
+                                <label for="" class="col-sm-2 col-form-label">Uid:</label>
+                                <input type="text" class="form-control" placeholder="Nhập UID Nhân Vật" name="uid">
+                            </div>
+                        </div>
+                    </form>
+                    <form>
+                        <div class="row mt-4">
+                            <div class="col d-flex">
+                                <label for="" class="col-sm-2 col-form-label">Tên nhân vật:</label>
+                                <input type="text" class="form-control" placeholder="Nhập Tên Nhân Vật" name="name">
+                            </div>
+                            <div class="col d-flex">
+                                <label for="" class="col-sm-2 col-form-label">Số điện thoại Zalo:</label>
+                                <input type="text" class="form-control" placeholder="Nhập Số Điện Thoại Zalo"
+                                    name="sdt">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="pay mt-5">
+                    <h4 class="fw-bold">Cách thanh toán</h4>
+                    <div class="row mt-4">
+                        <div class="col-lg-5 d-flex border p-2 mx-4" style="border-radius: 15px;">
+                            <div class="form-check d-flex align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" checked>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Momo
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-end  w-100">
+                                <img src="image/logoMomo.png" alt="" style="width: 40px;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex border p-2" style="border-radius: 15px;">
+                            <div class="form-check d-flex align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Thẻ tín dụng
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-end  w-75">
+                                <img src="image/logocard.png" alt="" style="width: 40px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-5 mx-4 d-flex border p-2" style="border-radius: 15px;">
+                            <div class="form-check d-flex align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        9Pay
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-end w-100">
+                                <img src="image/logo9pay.png" alt="" style="width: 60px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items mt-4">
+                    <h4 class="fw-bold">Chọn vật phẩm</h4>
+                    <ul class="nav nav-pills mb-3 mt-3" id="pills-tab" role="tablist">
+                        <li class="nav-item border mx-2 rounded" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Tất Cả</button>
+                        </li>
+                        <li class="nav-item border mx-2 rounded" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Không Nguyệt Chúc Phúc</button>
+                        </li>
+                        <li class="nav-item border mx-2 rounded" role="presentation">
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                                aria-selected="false">Nhật Ký Hành Trình</button>
+                        </li>
+                        <li class="nav-item border mx-2 rounded" role="presentation">
+                            <button class="nav-link" id="pills-primo-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-primo" type="button" role="tab" aria-controls="pills-primo"
+                                aria-selected="false">Đá Sáng Thế</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/KNCP.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Không Nguyệt
+                                                Chúc Phúc</h5>
+                                            <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">109.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/NKHT.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Nhật Ký Hành
+                                                Trình Trân Trâu</h5>
+                                            <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModals">219.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3" style="border-radius: 20px;">
+                                    <div class="card">
+                                        <img src="image/BCTR.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Bài Ca Trân Châu
+                                            </h5>
+                                            <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModalx">499.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3" style="border-radius: 20px;">
+                                    <div class="card">
+                                        <img src="image/da1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế x60
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">22.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da2.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế x300
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">109.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da3.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế x980
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">329.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da4.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế
+                                                x1980
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">699.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da5.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế
+                                                x3280
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">1.099.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da6.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế
+                                                x6480</h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">2.199.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/KNCP.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Không Nguyệt
+                                                Chúc Phúc</h5>
+                                            <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">109.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/NKHT.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Nhật Ký Hành
+                                                Trình Trân Trâu</h5>
+                                            <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModals">219.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3" style="border-radius: 20px;">
+                                    <div class="card">
+                                        <img src="image/BCTR.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Bài Ca Trân Châu
+                                            </h5>
+                                            <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModalx">499.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-primo" role="tabpanel" aria-labelledby="pills-primo-tab">
+                            <div class="row mt-4">
+                                <div class="col-lg-3" style="border-radius: 20px;">
+                                    <div class="card">
+                                        <img src="image/da1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế x60
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">22.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da2.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế x300
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">109.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da3.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế x980
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">329.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da4.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế
+                                                x1980
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">699.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da5.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế
+                                                x3280
+                                            </h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">1.099.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card" style="border-radius: 20px;">
+                                        <img src="image/da6.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center" style="font-size: 19px;">Đá Sáng Thế
+                                                x6480</h5>
+                                            <a href="thanhtoan.html" class="btn btn-primary w-100">2.199.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modals">
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                    <div class="modal-content" style="border-radius: 20px;">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="exampleModalLabel">Không Nguyệt Chúc
+                                                Phúc
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Giới Thiệu Không Nguyệt Chúc Phúc</p>
+                                            <p>
+                                                Mỗi lần mua Không Nguyệt Chúc Phúc, có thể nhận ngay 300 viên Đá Sáng
+                                                Thế và
+                                                Không Nguyệt Chúc Phúc có hiệu lực 30 ngày.
+                                                Trong thời gian Không Nguyệt Chúc Phúc có hiệu lực, mỗi ngày đăng nhập
+                                                có
+                                                thể nhận được 90 Nguyên Thạch.
+                                            </p>
+                                            <p>Chú ý</p>
+                                            <p>1. Khi thời gian hiệu lực của Không Nguyệt Chúc Phúc ≤180 ngày, mua tiếp
+                                                thì
+                                                tổng thời gian còn hiệu lực mới được cộng thêm.</p>
+                                            <p>2. Không Nguyệt Chúc Phúc không thể mua nhiều lần khi thời gian hiệu lực
+                                                >180
+                                                ngày. Trong trường hợp vẫn mua trùng thì sẽ không được cộng thêm vào
+                                                tổng
+                                                thời gian có hiệu lực, đồng thời hệ thống sẽ hoàn trả 330 Đá Sáng Thế.
+                                            </p>
+                                            <p>3. Trong khoảng thời gian Không Nguyệt Chúc Phúc có hiệu lực, nếu người
+                                                chơi
+                                                không đăng nhập để nhận Nguyên Thạch thì sẽ không được hoàn trả.</p>
+                                            <p>4. Tài khoản có hạng mạo hiểm < 5 tạm thời không thể xem số ngày còn lại
+                                                    của thẻ tháng.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-primary" style="border-radius: 10px;"
+                                                href="thanhtoan.html" role="button">
+                                                109.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                    <div class="modal-content" style="border-radius: 20px;">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="exampleModalLabel">Nhật Ký Hành Trình
+                                                Trân Trâu
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Nhật Ký Hành Trình Trân Châu</p>
+                                            <p>
+                                                Nhà Lữ Hành mua Nhật Ký Hành Trình Trân Châu trên nền tảng nạp này cần
+                                                nhanh
+                                                chóng dùng tài khoản này đăng nhập game để mở khóa những phần thưởng
+                                                phong
+                                                phú.
+                                                Nhà Lữ Hành đã mua và mở khóa Nhật Ký Hành Trình Trân Châu, nếu cần có
+                                                thể
+                                                mua Bài Ca Hành Trình đề nâng cấp lên Bài Ca Trân Châu.
+                                                Để biết thêm nội dung phần thưởng và điều kiện nhận thưởng liên quan đến
+                                                Nhật Ký Hành Trình Trân Châu, vui lòng đăng nhập game và xem tại Trang
+                                                Chủ -
+                                                Nhật Ký Hành Trình.
+                                                Để xem quy tắc chi tiết liên quan đến Nhật Ký Hành Trình Trân Châu, vui
+                                                lòng
+                                                đăng nhập game để xem tại Trang Chủ - Nhật Ký Hành Trình - Giới Thiệu
+                                                Quy
+                                                Tắc và thông báo Giới Thiệu Sự Kiện Nhật Ký Hành Trình mỗi kỳ trên trang
+                                                chủ
+                                                Genshin Impact.
+                                            </p>
+                                            <p>Giới Thiệu Đặc Biệt</p>
+                                            <p>* Khi mua và mở khóa Nhật Ký Hành Trình Trân Châu trên nền tảng nạp này,
+                                                nếu
+                                                không kịp thời đăng nhập game trong thời gian sự kiện Nhật Ký Hành Trình
+                                                sẽ
+                                                không thể nhận được phần thưởng mở khóa Nhật Ký Hành Trình kỳ này.</p>
+                                            <p>* Khi mua và mở khóa Nhật Ký Hành Trình Trân Châu trên nền tảng nạp này,
+                                                nêu
+                                                xuất hiện tình trạng mua trùng lập vật phẩm liên quan đến Nhật Ký Hành
+                                                Trình, sẽ chuyển thành Đá Sáng Thế với số lượng tương ứng theo quy tắc
+                                                của
+                                                Nhật Ký Hành Trình.</p>
+                                            <p>* 48 giờ trước khi sự kiện Nhật Ký Hành Trình kỳ này kết thúc, sẽ đóng
+                                                mua
+                                                Nhật Ký Hành Trình Trân Châu, Bài Ca Trân Châu và Bài Ca Hành Trình trên
+                                                trang Trung Tâm Nạp. Sau khi đóng mua, Nhà Lữ Hành vẫn có thể đăng nhập
+                                                game
+                                                để hoàn thành nhiệm vụ Nhật Ký Hành Trình và nhận phần thường tương ứng
+                                                trong thời gian hiệu lực của sự kiện Nhật Ký Hành Trình. Nhà Lữ Hành vui
+                                                lòng chú ý thời gian mua và thời gian sự kiện của Nhật Ký Hành Trình.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-primary" style="border-radius: 10px;"
+                                                href="thanhtoan.html" role="button">
+                                                219.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalx" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                    <div class="modal-content" style="border-radius: 20px;">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="exampleModalLabel">Bài Ca Trân Trâu
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Bài Ca Trân Châu</p>
+                                            <p>
+                                                Nhà Lữ Hành mua Bài Ca Trân Châu trên nền tảng nạp này cần nhanh chóng
+                                                dùng
+                                                tài khoản này đăng nhập game để mở khóa những phần thưởng phong phú.
+                                                Để biết thêm nội dung phần thưởng và điều kiện nhận thưởng liên quan đến
+                                                Bài
+                                                Ca Trân Châu, vui lòng đăng nhập game và xem tại Trang Chủ - Nhật Ký
+                                                Hành
+                                                Trình.Để xem quy tắc chi tiết liên quan đến Bài Ca Trân Châu, vui lòng
+                                                đăng
+                                                nhập game để xem tại Trang Chủ - Nhật Ký Hành Trình - Giới Thiệu Quy Tắc
+                                                và
+                                                thông báo Giới Thiệu Sự Kiện Nhật Ký Hành Trình mỗi kỳ trên trang chủ
+                                                Genshin Impact.
+                                            </p>
+                                            <p>Giới Thiệu Đặc Biệt</p>
+                                            <p>* Khi mua và mở khóa Bài Ca Trân Châu trên nền tảng nạp này, nếu không
+                                                kịp
+                                                thời đăng nhập game trong thời gian sự kiện Nhật Ký Hành Trình sẽ không
+                                                thể
+                                                nhận được phần thường mở khóa Nhật Ký Hành Trình kỳ này.</p>
+                                            <p>* Khi mua và mở khóa Bài Ca Trân Châu trên nền tảng nạp này, nếu xuất
+                                                hiện
+                                                tình trạng mua trùng lặp vật phẩm liên quan đến Nhật Ký Hành Trình, sẽ
+                                                chuyển thành Đá Sáng Thế với số lượng tương ứng theo quy tắc của Nhật Ký
+                                                Hành Trình.</p>
+                                            <p>* 48 giờ trước khi sự kiện Nhật Ký Hành Trình kỳ này kết thúc, sẽ đóng
+                                                mua
+                                                Nhật Ký Hành Trình Trân Châu, Bài Ca Trân Châu và Bài Ca Hành Trình trên
+                                                trang Trung Tâm Nạp. Sau khi đóng mua, Nhà Lữ Hành vẫn có thể đăng nhập
+                                                game
+                                                để hoàn thành nhiệm vụ Nhật Ký Hành Trình và nhận phần thưởng tương ứng
+                                                trong thời gian hiệu lực của sự kiện Nhật Ký Hành Trình. Nhà Lữ Hành vui
+                                                lòng chú ý thời gian mua và thời gian sự kiện của Nhật Ký Hành Trình.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-primary" style="border-radius: 10px;"
+                                                href="thanhtoan.html" role="button">
+                                                499.000 đ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <p class="mt-3">Email CSKH: <span class="text-info">01228116641a@gmail.com</span></p>
+        </div>
+    </div>
+    <footer class="fw-bold text-light text-center p-3 bg-dark">
+        <p>PC10136-Săn-Quỷ</p>
+        <img src="image/logo.png" alt="" width="300px">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
