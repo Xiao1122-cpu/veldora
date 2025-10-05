@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quản lý Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-md-block bg-dark text-white sidebar collapse" id="sidebarMenu"
+                style="height: 700px;">
+                <div class="position-sticky pt-3">
+                    <img src="image/logo.png" alt="" style="width: 90%;">
+                    <h5 class="px-3 text-center">Admin</h5>
+                    <ul class="nav flex-column mt-5">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-white active" href="carousel.html">Carousel</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="news.html">Tin tức</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="games.html">Game</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="items.html">Vật phẩm</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="users.html">Người dùng</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="orders.html">Đơn hàng</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <nav class="navbar navbar-light bg-light p-3 mb-3">
+                    <form class="d-flex w-50">
+                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Tìm</button>
+                    </form>
+                    <div class="text-end">
+                        <button class="btn btn-outline-secondary"><i class="bi bi-bell-fill"></i></button>
+                        <img src="image/logoGl.jpeg" class="rounded-circle ms-1 w-25" alt="Admin">
+                    </div>
+                </nav>
+                <h3 class="mb-3"><i class="bi bi-controller"></i> Quản lý Game</h3>
+                <a href="#" class="btn btn-primary mb-3">+ Thêm mới Game</a>
+                <table class="table table-bordered table-hover text-center align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Logo</th>
+                            <th>Tên Game</th>
+                            <th>Thể loại</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="image/logoHK.jpeg" style="width: 10%;" class="rounded" alt="Game"></td>
+                            <td>Genshin Impact</td>
+                            <td>MMORPG</td>
+                            <td><span class="badge bg-success">Hoạt động</span></td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">Sửa</button>
+                                <button class="btn btn-danger btn-sm">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="image/logoHR.png" style="width: 10%;" class="rounded" alt="Game"></td>
+                            <td>Honkai Star Rail</td>
+                            <td>RPG</td>
+                            <td><span class="badge bg-secondary">Bảo trì</span></td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">Sửa</button>
+                                <button class="btn btn-danger btn-sm">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
