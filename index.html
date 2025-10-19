@@ -91,6 +91,163 @@
             background-size: 1100px;
             position: relative
         }
+
+        /* Thêm CSS này vào trong thẻ <style> hiện tại */
+
+        /* --- Tối ưu cho thiết bị di động (Màn hình nhỏ hơn 768px) --- */
+        @media (max-width: 767.98px) {
+
+            /* 1. Thanh điều hướng (Header) */
+            header {
+                position: static;
+                /* Thay đổi fixed thành static trên mobile để không che nội dung */
+                opacity: 1;
+                /* Loại bỏ độ mờ khi không còn fixed */
+            }
+
+            /* Đảo ngược thứ tự các mục trong navbar trở lại bình thường trên mobile */
+            .navbar-collapse.flex-row-reverse {
+                flex-direction: column !important;
+                align-items: flex-start;
+            }
+
+            .navbar-nav {
+                width: 100%;
+                /* Đảm bảo menu chiếm toàn bộ chiều rộng khi mở */
+            }
+
+            /* 2. Carousel (Slider) */
+            .carousel-inner img {
+                height: 300px;
+                /* Giảm chiều cao hình ảnh trên mobile */
+            }
+
+            .carousel-caption {
+                bottom: 20px;
+                /* Đưa chú thích lên cao hơn */
+                left: 10px;
+                /* Đưa chú thích sang trái hơn */
+                right: 10px;
+                padding: 0;
+                text-align: center !important;
+            }
+
+            .carousel-caption .col-lg-2 {
+                margin: 0 auto 10px;
+                width: 30%;
+                /* Căn giữa logo */
+            }
+
+            .carousel-caption h1 {
+                font-size: 1.5rem !important;
+                /* Giảm kích thước tiêu đề lớn */
+                text-align: center !important;
+            }
+
+            .carousel-caption h1:last-of-type {
+                font-size: 1.2rem !important;
+                /* Giảm kích thước tiêu đề phụ */
+            }
+
+            /* 3. Phần Tin Tức (Cards) */
+            .container .row.p-3 {
+                padding: 0 !important;
+                /* Loại bỏ padding ngang lớn */
+            }
+
+            .col-lg-3,
+            .col-lg-6 {
+                margin-bottom: 15px;
+                /* Thêm khoảng cách giữa các card khi xếp chồng */
+            }
+
+            .card-img-overlay {
+                top: 150px;
+                /* Điều chỉnh vị trí của overlay trên card nhỏ hơn */
+            }
+
+            .card-img-overlay h5 {
+                font-size: 1.25rem;
+            }
+
+            .card-img-overlay p {
+                font-size: 0.9rem;
+            }
+
+            /* 4. Hiệu ứng Parallax (Parallax sections) */
+            .parallax,
+            .parallax2,
+            .logo {
+                /* Vô hiệu hóa hiệu ứng parallax trên thiết bị di động vì nó có thể gây lag */
+                background-attachment: scroll !important;
+                min-height: 200px !important;
+            }
+
+            .logo {
+                background-size: cover !important;
+                /* Đảm bảo logo vẫn hiển thị */
+            }
+
+            /* 5. Phần Sản Phẩm (Product Cards) */
+            .card-body[style*="display: flex;"] {
+                flex-direction: column;
+                /* Chuyển bố cục flex thành xếp chồng dọc */
+                align-items: center;
+                text-align: center;
+            }
+
+            .card-body img {
+                margin-bottom: 10px;
+            }
+
+            .card-body .col-lg-8 {
+                margin-left: 0 !important;
+            }
+
+            .card-body .col-lg-4.mt-4 {
+                margin-top: 10px !important;
+                width: 100%;
+                /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+            }
+
+            /* 6. Về HoYoverse & Trung Tâm Nạp */
+            .parallax2.d-flex {
+                flex-direction: column;
+                /* Xếp chồng 2 card dọc */
+            }
+
+            .parallax2 .card {
+                width: 90% !important;
+                /* Chiếm gần hết chiều rộng */
+            }
+        }
+
+        /* --- Tối ưu cho máy tính bảng (Màn hình từ 768px đến 991.98px) --- */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .carousel-inner img {
+                height: 500px;
+                /* Điều chỉnh chiều cao cho tablet */
+            }
+
+            .carousel-caption {
+                left: 50px;
+                bottom: 50px;
+            }
+
+            .card-img-overlay {
+                top: 180px;
+                /* Điều chỉnh vị trí overlay trên tablet */
+            }
+
+            /* Điều chỉnh cỡ chữ nhỏ hơn trên tablet */
+            .carousel-caption h1 {
+                font-size: 2.5rem !important;
+            }
+
+            .carousel-caption h1:last-of-type {
+                font-size: 1.8rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -111,7 +268,7 @@
                 <div class="collapse navbar-collapse fs-4 flex-row-reverse" id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="trangchu.html">Trang Chủ</a>
+                            <a class="nav-link active text-light" aria-current="page" href="index.html">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="tintuc.html">Tin Tức</a>
@@ -412,6 +569,7 @@
         <p>PC10136-Săn-Quỷ</p>
         <img src="image/logo.png" alt="" width="300px">
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
