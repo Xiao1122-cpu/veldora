@@ -66,6 +66,98 @@
             border: none;
             color: white;
         }
+
+        /* Thêm CSS này vào trong thẻ <style> hiện tại */
+
+        /* --- Tối ưu cho thiết bị di động (Màn hình nhỏ hơn 768px) --- */
+        @media (max-width: 767.98px) {
+
+            /* 1. Thanh điều hướng (Header) */
+            header {
+                position: static;
+                /* Thay đổi fixed thành static trên mobile để không che nội dung */
+                opacity: 1;
+                /* Loại bỏ độ mờ khi không còn fixed */
+            }
+
+            /* 2. Banner/Parallax */
+            .parallax2 {
+                background-attachment: scroll !important;
+                /* Vô hiệu hóa parallax trên mobile */
+                min-height: 200px;
+                /* Giảm chiều cao */
+            }
+
+            .parallax2 h1 {
+                font-size: 2.5rem !important;
+                /* Giảm kích thước tiêu đề */
+                margin-top: 10px !important;
+            }
+
+            /* 3. Phần Tiến trình (Slider) */
+            .slier {
+                /* Cho phép cuộn ngang (nếu cần) và thay đổi cách hiển thị */
+                display: flex;
+                overflow-x: auto;
+                /* Cho phép cuộn ngang nếu nội dung quá dài */
+                /* Ngăn các mục bị ngắt dòng */
+                padding: 0 10px;
+                /* Thêm padding ngang */
+                justify-content: flex-start;
+                /* Không cần căn giữa tuyệt đối */
+            }
+
+            .slier .item {
+                width: 120px;
+                /* Giảm chiều rộng của mỗi bước */
+                flex-shrink: 0;
+                /* Đảm bảo các item không bị co lại quá mức */
+                text-align: center;
+                /* Căn giữa nội dung trong item */
+                font-size: 0.9rem;
+                /* Giảm kích thước chữ */
+            }
+
+            /* Ẩn các gạch ngang nối các bước (vì nó dễ gây lỗi bố cục) */
+            .slier>p {
+                display: none;
+            }
+
+            /* Căn giữa bước 1, 2, 3 và tên */
+            .slier .item .page {
+                margin: 0 auto 5px auto;
+                /* Căn giữa icon và thêm khoảng cách dưới */
+                line-height: 30px;
+                /* Căn giữa số trong icon */
+            }
+
+            /* 4. Khối nội dung chính */
+            .container {
+                padding: 10px !important;
+                margin: 10px auto !important;
+                width: 95% !important;
+                /* Đảm bảo container chính chiếm hầu hết màn hình */
+            }
+        }
+
+        /* --- Tối ưu cho máy tính bảng (Màn hình từ 768px đến 991.98px) --- */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+
+            /* Điều chỉnh các item trong slider để có thêm không gian */
+            .slier .item {
+                width: 150px;
+            }
+
+            /* Giảm khoảng cách gạch ngang */
+            .slier>p {
+                margin: 0 10px;
+            }
+
+            /* Giảm kích thước nút Đăng Nhập */
+            .main-container .btn {
+                width: 35% !important;
+            }
+        }
     </style>
 </head>
 
@@ -146,10 +238,12 @@
                     </div>
                 </div>
                 <div class="container mt-3">
-                    <a class="btn btn-primary w-25" type="submit" style="border-radius: 10px;" href="batdaunap.html" role="button">Bắt Đầu Nạp</a>
+                    <a class="btn btn-primary w-25" type="submit" style="border-radius: 10px;" href="batdaunap.html"
+                        role="button">Bắt Đầu Nạp</a>
                     <p class="mt-3 pb-5">Email CSKH: <span class="text-info">01228116641a@gmail.com</span></p>
                 </div>
             </div>
+            
         </div>
     </div>
     <footer class="fw-bold text-light text-center p-3 bg-dark">

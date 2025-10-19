@@ -56,6 +56,75 @@
             border-radius: 20px;
             margin: 20px 0px;
         }
+
+        /* Thêm CSS này vào trong thẻ <style> hiện tại */
+
+        /* --- Tối ưu cho thiết bị di động (Màn hình nhỏ hơn 768px) --- */
+        @media (max-width: 767.98px) {
+
+            /* 1. Thanh điều hướng (Header) */
+            header {
+                position: static;
+                /* Thay đổi fixed thành static trên mobile để không che nội dung */
+                opacity: 1;
+                /* Loại bỏ độ mờ khi không còn fixed */
+            }
+
+            /* 2. Banner/Parallax */
+            .parallax2 {
+                background-attachment: scroll !important;
+                /* Vô hiệu hóa parallax trên mobile để tránh lỗi/lag */
+                min-height: 200px;
+                /* Giảm chiều cao */
+            }
+
+            .parallax2 h1 {
+                font-size: 2rem !important;
+                /* Giảm kích thước tiêu đề */
+                margin-top: 10px !important;
+                /* Điều chỉnh vị trí */
+            }
+
+            /* 3. Phần Nội dung chính */
+            .container.w-75 {
+                width: 95% !important;
+                /* Mở rộng container để chiếm nhiều không gian hơn trên mobile */
+                padding: 0 10px;
+            }
+
+            .text {
+                font-size: 1rem !important;
+                /* Giảm kích thước chữ trong đoạn văn */
+            }
+
+            /* 4. Phần Sản phẩm (Các logo game) */
+            .main-item {
+                display: block;
+                /* Chuyển từ flex (ngang) sang block (xếp chồng dọc) */
+            }
+
+            .main-item .item {
+                margin: 15px auto;
+                /* Căn giữa và thêm khoảng cách giữa các item */
+                width: 45%;
+                /* Giới hạn chiều rộng của mỗi item để chúng có thể nằm cạnh nhau nếu muốn */
+                display: inline-block;
+                /* Cho phép 2 items nằm trên 1 hàng (nếu đủ chỗ) */
+                vertical-align: top;
+                /* Căn trên khi nằm cạnh nhau */
+            }
+
+            /* Tinh chỉnh cho 2 logo lớn cuối */
+            .main-item:nth-child(2) {
+                text-align: center;
+                /* Căn giữa nội dung cho hàng thứ 2 */
+            }
+
+            .main-item:nth-child(2) .items,
+            .main-item:nth-child(2) .itemx {
+                width: 100% !important;
+                display: block;
+                margin:
     </style>
 
 </head>

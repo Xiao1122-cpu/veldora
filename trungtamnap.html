@@ -60,10 +60,119 @@
             border: 1px solid rgba(0, 0, 0, 0.5);
         }
 
-        .actives{
+        .actives {
             background-color: rgb(0, 149, 255);
             border: none;
-            
+
+        }
+
+        /* Thêm CSS này vào trong thẻ <style> hiện tại */
+
+        /* --- Tối ưu cho thiết bị di động (Màn hình nhỏ hơn 768px) --- */
+        @media (max-width: 767.98px) {
+
+            /* 1. Thanh điều hướng (Header) */
+            header {
+                position: static;
+                /* Thay đổi fixed thành static trên mobile để không che nội dung */
+                opacity: 1;
+                /* Loại bỏ độ mờ khi không còn fixed */
+            }
+
+            /* 2. Banner/Parallax */
+            .parallax2 {
+                background-attachment: scroll !important;
+                /* Vô hiệu hóa parallax trên mobile */
+                min-height: 200px;
+                /* Giảm chiều cao */
+            }
+
+            .parallax2 h1 {
+                font-size: 2.5rem !important;
+                /* Giảm kích thước tiêu đề */
+                margin-top: 10px !important;
+            }
+
+            /* 3. Phần Tiến trình (Slider) */
+            .slier {
+                /* Cho phép cuộn ngang (nếu cần) và thay đổi cách hiển thị */
+                display: flex;
+                overflow-x: auto;
+                /* Cho phép cuộn ngang nếu nội dung quá dài */
+                /* Ngăn các mục bị ngắt dòng */
+                padding: 0 10px;
+                /* Thêm padding ngang */
+                justify-content: flex-start;
+                /* Không cần căn giữa tuyệt đối */
+            }
+
+            .slier .item {
+                width: 120px;
+                /* Giảm chiều rộng của mỗi bước */
+                flex-shrink: 0;
+                /* Đảm bảo các item không bị co lại quá mức */
+                text-align: center;
+                /* Căn giữa nội dung trong item */
+                font-size: 0.9rem;
+                /* Giảm kích thước chữ */
+            }   
+            /* Ẩn các gạch ngang nối các bước (vì nó dễ gây lỗi bố cục) */
+            .slier>p {
+                display: none;
+            }
+
+            /* Căn giữa bước 1, 2, 3 và tên */
+            .slier .item .page {
+                margin: 0 auto 5px auto;
+                /* Căn giữa icon và thêm khoảng cách dưới */
+                line-height: 30px;
+                /* Căn giữa số trong icon */
+            }
+
+            /* 4. Khối nội dung chính */
+            .container {
+                padding: 10px !important;
+                margin: 10px auto !important;
+                width: 95% !important;
+                /* Đảm bảo container chính chiếm hầu hết màn hình */
+            }
+
+            .main-container .btn {
+                width: 50% !important;
+                /* Mở rộng nút Đăng Nhập */
+            }
+
+            /* 5. Modal Đăng Nhập/Đăng Ký */
+            .modal-dialog {
+                margin: 10% auto;
+                /* Đưa modal lên cao hơn một chút */
+                justify-items: center;
+            }
+
+            .modal-content {
+                /* Giữ nguyên chiều rộng tối đa của modal */
+                width: 90% !important;
+                
+            }
+        }
+
+        /* --- Tối ưu cho máy tính bảng (Màn hình từ 768px đến 991.98px) --- */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+
+            /* Điều chỉnh các item trong slider để có thêm không gian */
+            .slier .item {
+                width: 150px;
+            }
+
+            /* Giảm khoảng cách gạch ngang */
+            .slier>p {
+                margin: 0 10px;
+            }
+
+            /* Giảm kích thước nút Đăng Nhập */
+            .main-container .btn {
+                width: 35% !important;
+            }
         }
     </style>
 </head>
@@ -142,7 +251,7 @@
                             </div>
                             <div class="modal-body mx-4">
                                 <div class="text-center">
-                                    <img src="image/logo2-removebg-preview.png" alt="" class="w-50">
+                                    <img src="image/logo2.png" alt="" class="w-50">
                                     <h4 class="modal-title">Đăng Nhập Tài Khoản</h4>
                                 </div>
                                 <form class="text-center mt-4">
@@ -155,7 +264,8 @@
                                         <input type="password" class="form-control" id="exampleInputPassword1"
                                             placeholder="Mật Khẩu" style="border-radius: 10px;">
                                     </div>
-                                    <a class="btn btn-primary px-5 w-100 mt-4" style="border-radius: 10px;" href="trungtamnap1.html" role="button">
+                                    <a class="btn btn-primary px-5 w-100 mt-4" style="border-radius: 10px;"
+                                        href="trungtamnap1.html" role="button">
                                         Đăng Nhập</a>
                                 </form>
                                 <div class="text-end p-3" data-bs-toggle="modal" data-bs-target="#myModals">
@@ -174,7 +284,7 @@
                             </div>
                             <div class="modal-body mx-4">
                                 <div class="text-center">
-                                    <img src="image/logo2-removebg-preview.png" alt="" class="w-50">
+                                    <img src="image/logo2.png" alt="" class="w-50">
                                     <h4 class="modal-title">Đăng Ký</h4>
                                 </div>
                                 <form class="text-center mt-4">
